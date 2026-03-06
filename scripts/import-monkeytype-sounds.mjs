@@ -60,6 +60,11 @@ const extraSyntheticMap = [
   { id: 'x24', slug: 'velvet-tap', label: 'velvet tap' },
   { id: 'x25', slug: 'aqua-bloom', label: 'aqua bloom' },
   { id: 'x26', slug: 'luna-glint', label: 'luna glint' },
+  { id: 'x27', slug: 'bamboo-whisper', label: 'bamboo whisper' },
+  { id: 'x28', slug: 'ceramic-kiss', label: 'ceramic kiss' },
+  { id: 'x29', slug: 'rain-glass', label: 'rain glass' },
+  { id: 'x30', slug: 'satin-droplet', label: 'satin droplet' },
+  { id: 'x31', slug: 'starlit-ting', label: 'starlit ting' },
 ];
 
 const sampleRate = 44100;
@@ -637,6 +642,129 @@ function synthByName(name, index) {
     return normalize(lowPass(mix([a, b, c]), 5000));
   }
 
+  if (name === 'bamboo-whisper') {
+    const base = 230 + v * 2.6;
+    const body = renderTone({
+      freq: base,
+      durationSec: 0.085,
+      wave: 'triangle',
+      amp: 0.22,
+      attack: 0.0035,
+      releaseFactor: 0.76,
+      pitchDrop: 0.28,
+    });
+    const grain = renderTone({
+      freq: base * 4.8,
+      durationSec: 0.02,
+      wave: 'sine',
+      amp: 0.04,
+      attack: 0.0015,
+      releaseFactor: 0.45,
+    });
+    return normalize(lowPass(mix([body, grain]), 2200));
+  }
+
+  if (name === 'ceramic-kiss') {
+    const f = 710 + v * 6.5;
+    const ping = renderTone({
+      freq: f,
+      durationSec: 0.078,
+      wave: 'sine',
+      amp: 0.2,
+      attack: 0.002,
+      releaseFactor: 0.75,
+    });
+    const overtone = renderTone({
+      freq: f * 2.92,
+      durationSec: 0.055,
+      wave: 'sine',
+      amp: 0.085,
+      attack: 0.0016,
+      releaseFactor: 0.72,
+    });
+    return normalize(lowPass(mix([ping, overtone]), 4100));
+  }
+
+  if (name === 'rain-glass') {
+    const f = 520 + v * 5.1;
+    const dropletA = renderTone({
+      freq: f,
+      durationSec: 0.034,
+      wave: 'sine',
+      amp: 0.17,
+      attack: 0.0018,
+      releaseFactor: 0.66,
+    });
+    const dropletB = renderTone({
+      freq: f * 1.33,
+      durationSec: 0.03,
+      wave: 'sine',
+      amp: 0.11,
+      attack: 0.0015,
+      releaseFactor: 0.62,
+    });
+    const tail = renderTone({
+      freq: 260 + v * 2.7,
+      durationSec: 0.06,
+      wave: 'triangle',
+      amp: 0.08,
+      attack: 0.003,
+      releaseFactor: 0.78,
+    });
+    return normalize(lowPass(concatenate([mix([dropletA, dropletB]), tail]), 3200));
+  }
+
+  if (name === 'satin-droplet') {
+    const f = 285 + v * 3.4;
+    const bloom = renderTone({
+      freq: f,
+      durationSec: 0.092,
+      wave: 'sine',
+      amp: 0.22,
+      attack: 0.004,
+      releaseFactor: 0.82,
+      pitchDrop: -0.2,
+    });
+    const sheen = renderTone({
+      freq: f * 2.36,
+      durationSec: 0.05,
+      wave: 'triangle',
+      amp: 0.06,
+      attack: 0.002,
+      releaseFactor: 0.7,
+    });
+    return normalize(lowPass(mix([bloom, sheen]), 3000));
+  }
+
+  if (name === 'starlit-ting') {
+    const f = 840 + v * 7.2;
+    const core = renderTone({
+      freq: f,
+      durationSec: 0.07,
+      wave: 'sine',
+      amp: 0.18,
+      attack: 0.0018,
+      releaseFactor: 0.7,
+    });
+    const shimmer1 = renderTone({
+      freq: f * 2.04,
+      durationSec: 0.046,
+      wave: 'sine',
+      amp: 0.075,
+      attack: 0.0015,
+      releaseFactor: 0.64,
+    });
+    const shimmer2 = renderTone({
+      freq: f * 3.05,
+      durationSec: 0.033,
+      wave: 'sine',
+      amp: 0.045,
+      attack: 0.0012,
+      releaseFactor: 0.58,
+    });
+    return normalize(lowPass(mix([core, shimmer1, shimmer2]), 5200));
+  }
+
   return renderTone({ freq: 440, durationSec: 0.05, wave: 'sine', amp: 0.3 });
 }
 
@@ -737,6 +865,11 @@ function main() {
     'x24',
     'x25',
     'x26',
+    'x27',
+    'x28',
+    'x29',
+    'x30',
+    'x31',
   ];
   const all = [...fileBacked, ...monkeytypeSynthetic, ...extraSynthetic].sort(
     (a, b) => order.indexOf(a.id) - order.indexOf(b.id),

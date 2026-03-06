@@ -25,6 +25,11 @@ export type ClickSoundId =
   | 'velvet-tap'
   | 'aqua-bloom'
   | 'luna-glint'
+  | 'bamboo-whisper'
+  | 'ceramic-kiss'
+  | 'rain-glass'
+  | 'satin-droplet'
+  | 'starlit-ting'
 
 export interface ClickSoundOption {
   id: ClickSoundId;
@@ -468,6 +473,96 @@ export const CLICK_SOUND_OPTIONS: ClickSoundOption[] = [
       'luna-glint_08',
       'luna-glint_09',
       'luna-glint_10',
+    ],
+  },
+  {
+    id: 'bamboo-whisper',
+    label: 'bamboo whisper',
+    monkeytypeId: null,
+    sourceType: 'synthetic-generated',
+    variants: [
+      'bamboo-whisper_01',
+      'bamboo-whisper_02',
+      'bamboo-whisper_03',
+      'bamboo-whisper_04',
+      'bamboo-whisper_05',
+      'bamboo-whisper_06',
+      'bamboo-whisper_07',
+      'bamboo-whisper_08',
+      'bamboo-whisper_09',
+      'bamboo-whisper_10',
+    ],
+  },
+  {
+    id: 'ceramic-kiss',
+    label: 'ceramic kiss',
+    monkeytypeId: null,
+    sourceType: 'synthetic-generated',
+    variants: [
+      'ceramic-kiss_01',
+      'ceramic-kiss_02',
+      'ceramic-kiss_03',
+      'ceramic-kiss_04',
+      'ceramic-kiss_05',
+      'ceramic-kiss_06',
+      'ceramic-kiss_07',
+      'ceramic-kiss_08',
+      'ceramic-kiss_09',
+      'ceramic-kiss_10',
+    ],
+  },
+  {
+    id: 'rain-glass',
+    label: 'rain glass',
+    monkeytypeId: null,
+    sourceType: 'synthetic-generated',
+    variants: [
+      'rain-glass_01',
+      'rain-glass_02',
+      'rain-glass_03',
+      'rain-glass_04',
+      'rain-glass_05',
+      'rain-glass_06',
+      'rain-glass_07',
+      'rain-glass_08',
+      'rain-glass_09',
+      'rain-glass_10',
+    ],
+  },
+  {
+    id: 'satin-droplet',
+    label: 'satin droplet',
+    monkeytypeId: null,
+    sourceType: 'synthetic-generated',
+    variants: [
+      'satin-droplet_01',
+      'satin-droplet_02',
+      'satin-droplet_03',
+      'satin-droplet_04',
+      'satin-droplet_05',
+      'satin-droplet_06',
+      'satin-droplet_07',
+      'satin-droplet_08',
+      'satin-droplet_09',
+      'satin-droplet_10',
+    ],
+  },
+  {
+    id: 'starlit-ting',
+    label: 'starlit ting',
+    monkeytypeId: null,
+    sourceType: 'synthetic-generated',
+    variants: [
+      'starlit-ting_01',
+      'starlit-ting_02',
+      'starlit-ting_03',
+      'starlit-ting_04',
+      'starlit-ting_05',
+      'starlit-ting_06',
+      'starlit-ting_07',
+      'starlit-ting_08',
+      'starlit-ting_09',
+      'starlit-ting_10',
     ],
   },
 ];

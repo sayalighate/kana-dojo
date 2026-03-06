@@ -16,7 +16,9 @@ const random = new Random();
 
 let audioContext: AudioContext | null = null;
 const bufferCache = new Map<string, AudioBuffer>();
+const inFlightLoads = new Map<string, Promise<AudioBuffer | null>>();
 const MAX_CACHE_SIZE = 300;
+const CLICK_SOUND_PRELOAD_LIMIT = 3;
 
 /**
  * Get or create the shared AudioContext
@@ -41,10 +43,13 @@ const loadAudioBuffer = async (url: string): Promise<AudioBuffer | null> => {
   // Check cache first
   const cached = bufferCache.get(url);
   if (cached) return cached;
+  const pending = inFlightLoads.get(url);
+  if (pending) return pending;
 
-  try {
+  const loadPromise = (async () => {
+    try {
     const ctx = getAudioContext();
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: 'force-cache' });
     if (!response.ok) throw new Error(`Failed to fetch ${url}`);
 
     const arrayBuffer = await response.arrayBuffer();
@@ -60,10 +65,16 @@ const loadAudioBuffer = async (url: string): Promise<AudioBuffer | null> => {
 
     bufferCache.set(url, audioBuffer);
     return audioBuffer;
-  } catch (error) {
-    console.warn(`Failed to load audio: ${url}`, error);
-    return null;
-  }
+    } catch (error) {
+      console.warn(`Failed to load audio: ${url}`, error);
+      return null;
+    } finally {
+      inFlightLoads.delete(url);
+    }
+  })();
+
+  inFlightLoads.set(url, loadPromise);
+  return loadPromise;
 };
 
 /**
@@ -230,8 +241,9 @@ export const preloadClickSoundPack = async (
   soundId: ClickSoundId,
 ): Promise<void> => {
   const variantBaseUrls = getClickSoundVariantBaseUrls(soundId);
+  const prioritized = variantBaseUrls.slice(0, CLICK_SOUND_PRELOAD_LIMIT);
   await Promise.all(
-    variantBaseUrls.map(baseUrl => getClickPool(baseUrl).ensureLoaded()),
+    prioritized.map(baseUrl => getClickPool(baseUrl).ensureLoaded()),
   );
 };
 

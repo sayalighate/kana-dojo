@@ -32,7 +32,7 @@
   {
     "id": 6,
     "fact": "There are over 5.5 million vending machines in Japan - one for every 23 people - selling everything from hot ramen to fresh eggs to underwear.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1041,31 +1041,31 @@
     "id": 174,
     "fact": "Japan has 'depachika' - basement food halls in department stores selling luxury foods from around the world.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 175,
     "fact": "There's a Japanese word 'waku-waku' (わくわく) for excited anticipation - the tingly feeling of looking forward to something.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 176,
     "fact": "Japan has 'gokon' (合コン) - organized group blind dates where equal numbers of men and women meet at izakayas.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 177,
     "fact": "The word 'tadaima' (ただいま) means 'I'm home' and is always answered with 'okaeri' (お帰り) - 'welcome back.'",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 178,
     "fact": "Japan has vending machines that dispense hot canned coffee - a major morning ritual for millions of workers.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 179,
@@ -1088,55 +1088,55 @@
   {
     "id": 182,
     "fact": "Japan has over 1,500 earthquakes per year, though most are too small to feel - the country sits on four tectonic plates.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 183,
     "fact": "There's a Japanese word 'nakama' (仲間) for companions who are closer than friends but not quite family - a chosen tribe.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 184,
     "fact": "Japan has 'manga kissa' - internet cafes with private cubicles, free drinks, and vast manga libraries for overnight stays.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 185,
     "fact": "The concept 'hara hachi bu' (腹八分) means eating until 80% full - an Okinawan practice linked to longevity.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 186,
     "fact": "Japan has a tradition of giving 'otoshidama' (お年玉) - money in special envelopes to children on New Year's.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 187,
     "fact": "There's a Japanese practice 'teineisa' (丁寧さ) meaning politeness shown through meticulous attention to detail.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 188,
     "fact": "Japan has the world's longest-running comic book series - 'Kochira Katsushika-ku Kameari Kōen Mae Hashutsujo' ran for 40 years.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 189,
     "fact": "The word 'utsukushii' (美しい) means beautiful but implies something naturally elegant rather than artificially pretty.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 190,
     "fact": "Japan has 'lucky bags' (fukubukuro) sold on New Year's - sealed bags of discount mystery items worth more than the price.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1155,7 +1155,7 @@
     "id": 193,
     "fact": "The word 'kawai-sou' (可哀想) means pitiable but with genuine sympathy - you feel sorry for someone's circumstances.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 194,
@@ -1173,12 +1173,12 @@
     "id": 196,
     "fact": "Japan has 'shabu shabu' hot pot where you swish thin meat slices in boiling broth - named for the 'sha-sha' sound.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 197,
     "fact": "The concept 'sessha' (拙者) is an extremely humble way to say 'I' - originally used by samurai to show modesty.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1190,49 +1190,49 @@
   {
     "id": 199,
     "fact": "There's a Japanese word 'furusato' (故郷) for hometown - but with deep emotional weight of roots, identity, and belonging.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 200,
     "fact": "Japan has 'hansei' (反省) - structured self-reflection sessions where you honestly examine your mistakes to improve.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 201,
     "fact": "Japan has a word 'tsundoku' (積ん読) for buying books and letting them pile up unread.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 202,
     "fact": "In Japan, many shops display realistic food replicas called 'shokuhin sampuru' (食品サンプル) to show menu items.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 203,
     "fact": "Japan's elementary school students often clean their classrooms themselves in a routine called 'souji' (掃除), teaching responsibility.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 204,
     "fact": "The Japanese word 'yorimichi' (寄り道) means taking a pleasant detour on the way home just because.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 205,
     "fact": "Japan has 'eki-stamps' (駅スタンプ) — collectible rubber stamps at train stations that travelers gather like a passport.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 206,
     "fact": "Many Japanese supermarkets sell 'bento' at night with discount stickers that increase as closing time approaches.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1352,20 +1352,20 @@
   {
     "id": 226,
     "fact": "In Japan, umbrellas are so commonly shared and lost that many convenience stores sell inexpensive clear umbrellas as a standard item.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 227,
     "fact": "Japan has a culture of seasonal flavors, like sakura in spring and sweet potato in autumn, across snacks and drinks.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 228,
     "fact": "The Japanese term 'matsuri' (祭り) broadly means festival, and many neighborhoods host their own with portable shrines ('mikoshi').",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 229,
@@ -1376,7 +1376,7 @@
   {
     "id": 230,
     "fact": "The Japanese word 'nagori' (名残) describes the lingering feeling when a season is ending — like the last strawberries of spring.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1533,7 +1533,7 @@
     "id": 256,
     "fact": "The word 'asahi' (朝日) means morning sun, and many towns host sunrise walks called 'asahi sanpo'.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 257,
@@ -1562,7 +1562,7 @@
   {
     "id": 261,
     "fact": "Japan’s 'machi-nami hozon' movement preserves historic townscapes, protecting old streets so locals can still live and work there.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1580,13 +1580,13 @@
   {
     "id": 264,
     "fact": "The word 'kawaigaru' (可愛がる) means to dote on or cherish, often used for pets or younger relatives.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 265,
     "fact": "Japan’s 'shimenawa' (注連縄) sacred ropes are hung at shrines and homes to mark purified, protected spaces.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1892,7 +1892,7 @@
   {
     "id": 316,
     "fact": "The term 'shinnen' (信念) means conviction or strongly held belief, often tied to personal principles.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
